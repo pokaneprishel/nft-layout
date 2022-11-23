@@ -1,0 +1,271 @@
+/* fonts */
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: calc(20px + 3 * (100vw - 320px) / 880);
+    margin: 0;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: calc(14px + 3 * (100vw - 320px) / 880);
+    margin: 0;
+}
+
+h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: calc(12px + 3 * (100vw - 320px) / 880);
+    margin: 0;
+}
+
+h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: calc(7px + 3 * (100vw - 320px) / 880);
+    margin: 0;
+    color: grey;
+}
+
+/* grid wrapper */
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 10% 2fr 2fr 10%;
+    grid-template-rows: 80px 700px 1fr 100px 470px 8%;
+    justify-content: center;
+    grid-template-areas:
+        'hd hd hd hd'
+        'pr pr pr pr'
+        'ls mn mn rs'
+        'bt bt bt bt'
+        'ig ig ig ig'
+        'ft ft ft ft';
+}
+
+/* aside section */
+
+.left-side {
+    grid-area: ls;
+    background-color: white;
+}
+
+.right-side {
+    grid-area: rs;
+    background-color: white;
+}
+
+/* promo section */
+
+.promo {
+    grid-area: pr;
+}
+
+.promo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* main section */
+
+.main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 40px 400px 400px 400px;
+    gap: 20px;
+    grid-template-areas:
+        "mt mt mt";
+    grid-area: mn;
+
+    background-color: white;
+
+    padding: 20px;
+}
+
+.main-title {
+    display: grid;
+    align-items: center;
+    grid-area: mt;
+}
+
+.prod {
+    background-color: rgb(243, 243, 243);
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 1px 5px 5px lightgray;
+}
+
+.prod a {
+    transition: color 0.4s;
+    text-decoration: none;
+    color: black;
+}
+
+.prod img {
+    width: 100%;
+    height: 85%;
+    object-fit: cover;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.prod h4,
+h5 {
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+/* main button */
+
+.button {
+    grid-area: bt;
+
+    display: grid;
+    grid-template-columns: 80px;
+    grid-template-rows: 40px;
+    justify-self: center;
+    align-self: center;
+}
+
+.button-item {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 20px;
+    background-color: rgb(243, 243, 243);
+    box-shadow: 1px 5px 5px lightgray;
+    border: none;
+}
+
+.button-item a {
+    color: black;
+}
+
+/* header */
+
+header {
+    grid-area: hd;
+
+    background-color: black;
+    position: sticky;
+    top: 0;
+}
+
+/*  header nav */
+
+nav ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0px;
+}
+
+li {
+    margin: 0px;
+    padding: 25px;
+    list-style-type: none;
+}
+
+/* header logo */
+
+li img {
+    max-width: 10vh;
+    height: auto;
+}
+
+/* header a styles */
+
+a {
+    transition: color 0.4s;
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: crimson;
+}
+
+/* main infographic */
+
+.infographics {
+    grid-area: ig;
+
+    display: grid;
+    grid-template-columns: 26% 26% 26%;
+    grid-template-rows: 10px 80%;
+    justify-content: center;
+    column-gap: 1rem;
+    row-gap: 50px;
+    grid-template-areas:
+        'it it it';
+
+    background: rgb(0, 0, 0);
+    box-shadow: 0 -200px 100px -120px rgb(30, 30, 30) inset;
+    animation: background 7s infinite alternate;
+}
+
+.ig-title {
+    display: grid;
+    justify-items: center;
+    grid-area: it;
+
+    color: white;
+
+    padding-top: 15px;
+}
+
+@keyframes background {
+    50% {
+        background: rgb(30, 30, 30);
+        box-shadow: 0 -200px 100px -100px rgb(0, 0, 0) inset;
+    }
+}
+
+.ig {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+
+    background-color: white;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+.ig img {
+    max-width: 70%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* foooter */
+
+footer {
+    grid-area: ft;
+
+    background-color: black;
+}
+
+footer h5 {
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+footer img {
+    max-width: 13vh;
+    height: auto;
+    padding-left: 20px;
+    padding-bottom: 30px;
+    padding-top: 20px;
+}
+
+footer h5 {
+    color: white;
+
+    font-size: calc(9px + 3 * (100vw - 320px) / 880);
+}
+
+footer .year {
+    display: grid;
+    justify-items: center;
+
+    padding-top: 15px;
+}
