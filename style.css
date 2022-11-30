@@ -36,7 +36,7 @@ h5 {
 .wrapper {
     display: grid;
     grid-template-columns: 10% 2fr 2fr 10%;
-    grid-template-rows: 80px 45vh 1fr 100px 470px 8%;
+    grid-template-rows: 80px 70vh 1fr 100px 470px 8%;
     justify-content: center;
     grid-template-areas:
         'hd hd hd hd'
@@ -190,7 +190,7 @@ header {
 
 nav ul {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     max-width: 100%;
     max-height: 100%;
@@ -220,6 +220,17 @@ a {
 
 a:hover {
     color: crimson;
+}
+
+.autho {
+    max-width: 100%;
+    height: auto;
+}
+
+.header-input {
+    border-radius: 20px;
+    font-family: 'Montserrat', sans-serif;
+    padding: 8px;
 }
 
 /* main infographic */
